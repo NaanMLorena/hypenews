@@ -1,0 +1,14 @@
+.navbar {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /*Define o espaçamento entre os itens */
+    align-items: center; /*Centraliza os itens verticalmente */
+    background-color: #151c4a;
+}
+
+.logo, .search { /* Define o tamanho e posição da logo e da barra de pesquisa */
+    height: 2rem;
+    margin: 1.5rem; 
+}
