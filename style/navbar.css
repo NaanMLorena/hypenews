@@ -12,3 +12,27 @@
     height: 2rem;
     margin: 1.5rem; 
 }
+
+.search1 {
+    width: 10rem;
+    height: 2rem;
+    background-color: whitesmoke;
+    display: flex;
+    margin: 8rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+#searchButton {
+    background-color: whitesmoke;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+#searchInput {
+    border: none;
+    background-color: transparent;
+}

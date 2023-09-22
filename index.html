@@ -1,43 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/styles.css">
-    <link rel="stylesheet" href="/style/navbar.css">
-    <link rel="stylesheet" href="/style/header.css">
-    <title>SUBNOTIFICAÇÃO E BANALIZAÇÃO DOS CRIMES DE LGBTFOBIA</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style/styles.css">
+        <link rel="stylesheet" href="/style/navbar.css">
+        <link rel="stylesheet" href="/style/header.css">
+        <title>SUBNOTIFICAÇÃO E BANALIZAÇÃO DOS CRIMES DE LGBTFOBIA</title>
+    </head>
+    <body>
+
+        <!-- INÍCIO DA NAVBAR -->
+        <div class="nav-all">
+            <div class="navbar">
+                <div class="nav-item">
+                    <a href="index.html">
+                        <img src="/img/icon/logo.png" alt="Início" class="logo">
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <!-- <img src="/img/icon/search.png" alt="Pesquisa"
+                        class="search"> -->
+                    <div class="search1">
+                        <input type="text" id="searchInput"
+                            placeholder="Pesquisar">
+                        <button id="searchButton">Pesquisar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FINAL DA NAVBAR -->
+
+        <div class="content">
+            <div class="header">
+                <div class="title" id="texto">SUBNOTIFICAÇÃO E BANALIZAÇÃO DOS
+                    CRIMES DE
+                    LGBTFOBIA</div>
+                <div class="subtitle" id="texto">Como a banalização dos crimes
+                    de LGBTFobia
+                    prejudica toda a sociedade</div>
+                <div class="writer" id="texto">Por Gay Grupo Gay - IFRJ Mntr.</div>
+                <div class="data" id="texto">22/09/2023 - 13h14min - Atualizado
+                    há 2
+                    minutos</div>
+                <div class="line">ㅤ</div>
+                <div class="cover">
+                    <img
+                        src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2021/12/GettyImages-805461102.jpg"
+                        alt="" class="img-cover">
+                </div>
+            </div>
+            <div class="texto">
+                <div class="titulo" id="texto">
+                    Violência e preconceito
+                </div>
+                <div class="conteudo" id="texto">
+                    Atualmente podemos ver diversas táticas de inclusão da
+                    comunidade LGBTQIAPN+ sendo utilizadas por diversas empresas
+                    e plataformas, mas quando vemos por um espectro
+                    governamental, sobretudo no poder legislativo e na segurança
+                    pública, o que observamos é um completo descaso e
+                    negligência.
+                    Em 2021 foi contabilizado um total de 179 homicídios por
+                    alguns estados brasileiros, contra 285 casos verificados
+                    pelo Observatório de Mortes e Violências LGBTI+ no Brasil.
+                    Embora a diferença de mais de 100 mortes seja aterradora,
+                    essa falta de dados se deve à negligência por parte de 8
+                    estados, que não cederam quaisquer informações sobre crimes
+                    de estupro, violência e homicidio contra a comunidade
+                    LGBTQIAPN+.
+                    As razões para esta escassez de dados podem variar. O medo
+                    da denúncia, devido a possibilidade de violência simbólica
+                    ou preconceito na hora do registro do boletim de ocorrência,
+                    um desinteresse na produção de dados, ou mesmo conivência
+                    por parte dos órgãos responsáveis.
+                    Além disso, com a decisão do STF de enquadrar os crimes de
+                    homofobia e transfobia como racismo, fica mais difícil a
+                    identificação e registro destes crimes. Quando levamos em
+                    consideração alguns dos problemas levantados anteriormente,
+                    fica maior ainda o abismo na notificação de crimes de menor
+                    grau, como a injúria, frente aos casos de violência que,
+                    como já visto, são subnotificados.
+
+                </div>
+            </div>
+        </div>
+        <script>
+            // Captura o elemento de entrada de texto e o botão
+            var searchInput = document.getElementById('searchInput');
+            var searchButton = document.getElementById('searchButton');
+            var texto = document.getElementById('texto');
     
-    <!-- INÍCIO DA NAVBAR -->
-    <div class="nav-all">
-        <div class="navbar">
-            <div class="nav-item">
-                <a href="index.html">
-                    <img src="/img/icon/logo.png" alt="Início" class="logo">
-                </a>
-            </div>
-            <div class="nav-item">
-                <img src="/img/icon/search.png" alt="Pesquisa" class="search">
-            </div>
-        </div>
-    </div>
-    <!-- FINAL DA NAVBAR -->
-
-    <div class="content">
-        <div class="header">
-            <div class="title">SUBNOTIFICAÇÃO E BANALIZAÇÃO DOS CRIMES DE LGBTFOBIA</div>
-            <div class="subtitle">Como a banalização dos crimes de LGBTFobia prejudica toda a sociedade</div>
-            <div class="writer">Por Aline Monsores - IFRJ Mntr.</div>
-            <div class="data">19/08/1999 - 15h99min - Atualizado há 2 anos</div>
-            <div class="line">ㅤ</div>
-            <div class="cover">
-                <img src="/img/images/img-cover.jpg" alt="Manifesto contra LGBTFobia" class="img-cover">
-            </div>
-        </div>
-    </div>
-
-</body>
+            // Adiciona um evento de clique ao botão
+            searchButton.addEventListener('click', function() {
+                // Captura a palavra de pesquisa
+                var searchTerm = searchInput.value;
+                
+                // Limpa o destaque anterior
+                texto.innerHTML = texto.innerHTML.replace(/<span class="highlight">|<\/span>/g, '');
+    
+                // Verifica cada ocorrência da palavra no texto e destaca
+                var textoHTML = texto.innerHTML;
+                var regex = new RegExp(searchTerm, 'gi');
+                texto.innerHTML = textoHTML.replace(regex, '<span class="highlight">$&</span>');
+            });
+        </script>
+    </body>
 </html>
