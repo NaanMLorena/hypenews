@@ -1,0 +1,20 @@
+.texto {
+    width: 70%;
+}
+
+.titulo {
+    font-size: 2rem;
+}
+
+.conteudo {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.break {
+    margin: 1rem;
+}
+
+.break2 {
+    margin: 2rem;
+}
