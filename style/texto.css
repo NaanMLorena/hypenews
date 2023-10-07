@@ -13,8 +13,20 @@
 
 .break {
     margin: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 .break2 {
     margin: 2rem;
+}
+
+.player {
+    display: flex;
+    justify-content: center;
+}
+
+.player iframe {
+    width: 780px;
+    height: 440px;
 }
